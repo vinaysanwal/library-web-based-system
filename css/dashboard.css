@@ -1,0 +1,11 @@
+.cardbox{
+  width:100%;
+  float: left;
+  background-color: #ccc;
+  box-sizing: border-box;
+  color:#000;
+  height:auto;
+  margin:20px 0px;
+  padding:20px;
+  line-height: 4.2em;
+}
