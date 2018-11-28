@@ -1,11 +1,19 @@
 .cardbox{
   width:100%;
   float: left;
-  background-color: #ccc;
+  background-color: #eee;
   box-sizing: border-box;
   color:#000;
   height:auto;
-  margin:20px 0px;
-  padding:20px;
+  margin:40px 0px;
+  text-align: center;
   line-height: 4.2em;
+}
+.page-footer{
+  background-color: #009435;
+  margin-top:20px;
+}
+.navbar{
+  background-color: #009435 !important
+  ;
 }

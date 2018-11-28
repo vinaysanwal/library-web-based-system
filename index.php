@@ -7,7 +7,7 @@
           13 Books Available
         </div>
         <div class="col-sm-12">
-          <button class="btn btn-primary">View All books</button>
+          <a href="books"><button class="btn btn-primary">View All books</button></a>
         </div>
       </div>
     </div>
@@ -17,7 +17,7 @@
         13 Student
       </div>
       <div class="col-sm-12">
-        <a href="<?php '$siteRoot/student.php';?>"><button class="btn btn-primary">View All Student</button>
+        <a href="student"><button class="btn btn-primary">View All Student</button></a>
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@
             13 Saff Member
           </div>
           <div class="col-sm-12">
-            <button class="btn btn-primary">View All Staff</button>
+            <a href="staffMember"><button class="btn btn-primary">View All Staff</button></a>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@
           Best Novel
         </div>
         <div class="col-sm-12">
-          <button class="btn btn-primary">All Best Novel</button>
+          <a href="bestnovel"><button class="btn btn-primary">All Best Novel</button></a>
         </div>
       </div>
     </div>

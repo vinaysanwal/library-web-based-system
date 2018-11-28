@@ -1,37 +1,37 @@
 <?php include('header.php'); ?>
 <div class="container">
-<div class="cardbox">
+<div class="row">
+<div class="col-md-12">
+<div class="formbox">
 <form action="">
  <div class="form-group">
-   <label for="firstName">Enter First Name:</label>
-   <input type="text" class="form-control" name="firstName">
+   <label for="bookName">Enter Book Name:</label>
+   <input type="text" class="form-control" name="bookName" required>
  </div>
  <div class="form-group">
-   <label for="lastName">Enter Last Name:</label>
-   <input type="text" class="form-control" name="lastName">
- </div>
- <div class="form-group">
-   <label for="rollNo">Enter Roll No :</label>
-   <input type="text" class="form-control" name="rollNo">
- </div>
- <div class="form-group">
-   <label for="stream">Enter Stream:</label>
-   <input type="text" class="form-control" name="stream">
- </div>
- <div class="form-group">
-   <label for="dob">Date Of Birth:</label>
-   <input type="text" class="form-control" name="dob">
- </div>
- <div class="form-group">
-    <label for="exampleFormControlSelect1">Membership Status</label>
-    <select class="form-control" name="membership">
-      <option>Basic</option>
-      <option>Advanced</option>
-      <option>Premium</option>
+    <label for="bookCategory">Book Category</label>
+    <select class="form-control" name="bookCategory" required>
+      <option>Science</option>
+      <option>Arts</option>
+      <option>Engineering</option>
     </select>
-  </div>
+ </div>
+ <div class="form-group">
+   <label for="price">Enter Price :</label>
+   <input type="text" class="form-control" name="price" required>
+ </div>
+ <div class="form-group">
+   <label for="yearOfPublishing">Year of Publishing</label>
+   <input type="text" class="form-control" name="yearOfPublishing" required>
+ </div>
+ <div class="form-group">
+   <label for="auhorName">Enter Author Name</label>
+   <input type="text" class="form-control" name="authorName">
+ </div>
  <button type="submit" class="btn btn-primary">Submit</button>
-</div>
 </form>
+</div>
+</div>
+</div>
 </div>
 <?php include('footer.php'); ?>
