@@ -18,15 +18,23 @@
                 <th>Action</th>
             </tr>
         </thead>
+        <?php
+        require_once('include/pdo.php');
+        //instantiating
+        $db = new dbase ;
+           $db->query('SELECT * from staff');
+           $get_staff = $db->fetchMultiple();
+        ?>
+        <?php foreach($get_staff as $staff) { ?>
         <tbody>
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-                <td>Yes</td>
+                <td><?php echo $staff['staff_id'] ?></td>
+                <td><?php echo ($staff['staff_first_name'] . " " . $staff['staff_last_name']); ?></td>
+                <td><?php echo $staff['staff_work_type']; ?></td>
+                <td><?php echo $staff['staff_age']; ?></td>
+                <td><?php echo $staff['staff_joining_date']; ?></td>
+                <td><?php echo $staff['staff_salary']; ?></td>
+                <td><?php echo $staff['staff_working_status']; ?></td>
                 <td>
                   <i class="fa fa-edit" title="edit"></i>
                   <i class="fa fa-trash" title="delete"></i>
@@ -34,6 +42,7 @@
                 </td>
             </tr>
         </tbody>
+      <?php } ?>
     </table>
   </div>
 </div>

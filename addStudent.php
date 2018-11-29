@@ -1,9 +1,10 @@
-<?php include('header.php');
-      include('include/function.php');
+<?php include ('header.php');
+      include ('include/function.php');
 ?>
 <div class="container">
 <div class="row">
 <div class="col-md-12">
+  <?php display_msg(); ?>
 <div class="formbox">
 <form action="<?php  process_student_registration(); ?>" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
@@ -15,7 +16,7 @@
    <input type="text" class="form-control" name="lastName" required>
  </div>
  <div class="form-group">
-   <label for="rollNo">Enter Roll No :</label>
+   <label for="rollNo">Enter Roll No:</label>
    <input type="text" class="form-control" name="rollNo" required>
  </div>
  <div class="form-group">
@@ -27,7 +28,7 @@
    <input type="text" class="form-control" name="dob" required>
  </div>
  <div class="form-group">
-    <label for="membership">Membership Status</label>
+    <label for="membership">Membership Status:</label>
     <select class="form-control" name="membership" required>
       <option value="0">Basic</option>
       <option value="1">Advanced</option>

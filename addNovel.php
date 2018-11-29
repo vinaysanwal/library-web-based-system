@@ -1,9 +1,11 @@
-<?php include('header.php'); ?>
+<?php include('header.php');
+      include('include/function.php');
+?>
 <div class="container">
 <div class="row">
 <div class="col-md-12">
 <div class="formbox">
-<form action="">
+<form action="<?php process_addNovel(); ?>" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
    <label for="bookName">Enter Book Name:</label>
    <input type="text" class="form-control" name="bookName" required>
@@ -23,7 +25,7 @@
   <label for="yearOfPublishing">Year Of Publishing:</label>
   <input type="text" class="form-control" name="yearOfPublishing" required>
 </div>
- <button type="submit" class="btn btn-primary">Submit</button>
+ <button type="submit" class="btn btn-primary"name="add_novel">Submit</button>
 </form>
 </div>
 </div>

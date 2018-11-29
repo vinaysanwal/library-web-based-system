@@ -1,9 +1,11 @@
-<?php include('header.php'); ?>
+<?php include('header.php');
+      include('include/function.php');
+?>
 <div class="container">
 <div class="row">
 <div class="col-md-12">
 <div class="formbox">
-<form action="">
+<form action="<?php process_addStaff(); ?>" role="form" method="post" enctype="multipart/form-data">
  <div class="form-group">
    <label for="firstName">Enter First Name:</label>
    <input type="text" class="form-control" name="firstName" required>
@@ -26,7 +28,7 @@
  </div>
  <div class="form-group">
    <label for="date">Starting Date:</label>
-   <input type="text" class="form-control" name="date" required>
+   <input type="text" class="form-control" name="dateofjoining" required>
  </div>
  <div class="form-group">
    <label for="date">Salary</label>
@@ -39,7 +41,7 @@
       <option>No</option>
     </select>
 </div>
- <button type="submit" class="btn btn-primary">Submit</button>
+ <button type="submit" class="btn btn-primary" name="add_staff">Submit</button>
 </form>
 </div>
 </div>

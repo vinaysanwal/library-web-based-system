@@ -4,6 +4,7 @@
   <div class="row">
   <div class="col-md-12">
   <div class="tablebox">
+
 <table id="example" class="table table-striped table-bordered" style="width:100%">
         <button class="btn btn-danger btn-add">Add Student</button>
         <thead>
@@ -17,14 +18,24 @@
                 <th>Action</th>
             </tr>
         </thead>
+        <?php
+        require_once('include/pdo.php');
+        //instantiating
+        $db = new dbase ;
+
+           $db->query('SELECT * from students');
+
+           $get_students = $db->fetchMultiple();
+        ?>
+        <?php foreach($get_students as $students) { ?>
         <tbody>
             <tr>
-                <a href="index"><td>1</td></a>
-                <a href="#"><td>Vinay Sanwal</td></a>
-                <a href="#"><td>12345</td></a>
-                <a href="#"><td>Science</td></a>
-                <a href="#"><td>2/08/1995</td></a>
-                <a href="#"><td>Premium</td></a>
+                <td><?php echo $students['student_id'] ?></td>
+                <td><?php echo ($students['student_first_name'] . " " . $students['student_last_name']); ?></td>
+                <td><?php echo $students['student_roll_no']; ?></td>
+                <td><?php echo $students['student_stream']; ?></td>
+                <td><?php echo $students['student_dob']; ?></td>
+                <td><?php echo $students['student_membership']; ?></td>
                 <td>
                   <i class="fa fa-edit" title="edit"></i>
                   <i class="fa fa-trash" title="delete"></i>
@@ -32,6 +43,7 @@
                 </td>
             </tr>
         </tbody>
+      <?php } ?>
     </table>
   </div>
 </div>
